@@ -54,15 +54,6 @@ public class Restaurant {
         menu.add(newItem);
     }
 
-    public int calculateOrderTotal(List<Item> menu){
-        int totalItemcost = 0;
-        for(Item item : menu){
-            totalItemcost += totalItemcost + item.getPrice();
-
-            }
-        return totalItemcost;
-        }
-    
     public void removeFromMenu(String itemName) throws itemNotFoundException {
 
         Item itemToBeRemoved = findItemByName(itemName);

@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.jupiter.api.*;
 
 import java.time.LocalTime;
@@ -25,8 +26,9 @@ class RestaurantServiceTest {
         //WRITE UNIT TEST CASE HERE
 
         Restaurant Restaurantname = service.findRestaurantByName("Amelie's cafe");
-
         assertEquals(restaurant.getName(),Restaurantname.getName());
+
+
     }
 
     //You may watch the video by Muthukumaran on how to write exceptions in Course 3: Testing and Version control: Optional content
