@@ -74,7 +74,10 @@ class RestaurantTest {
     @Test
     public void ArrayListSize_of_selected_items_should_be_greater_than_zero(){
         ArrayList<String> itemnames = new ArrayList<>();
+        itemnames.add("Sweet corn soup");
+        itemnames.add("Vegetable lasagne");
         assertEquals(2,itemnames.size());
+        assertEquals(388,restaurant.displayOrderTotal(itemnames));
 
     }
 
