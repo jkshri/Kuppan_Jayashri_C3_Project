@@ -71,5 +71,14 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
 
+    @Test
+    public void ArrayListSize_of_selected_items_should_be_greater_than_zero(){
+        ArrayList<String> itemnames = new ArrayList<>();
+        assertEquals(2,itemnames.size());
+
+    }
+
+
+
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }

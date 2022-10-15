@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -20,37 +21,36 @@ public class Restaurant {
 
     public boolean isRestaurantOpen() {
 
-        if((getCurrentTime().isAfter(openingTime))&&(getCurrentTime().isBefore(closingTime)))
-        {
+        if ((getCurrentTime().isAfter(openingTime)) && (getCurrentTime().isBefore(closingTime))) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
-
 
 
         //DELETE ABOVE STATEMENT AND WRITE CODE HERE
     }
 
 
-    public LocalTime getCurrentTime(){ return  LocalTime.now(); }
+    public LocalTime getCurrentTime() {
+        return LocalTime.now();
+    }
 
     public List<Item> getMenu() {
         return Collections.unmodifiableList(menu);
         //DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
     }
 
-    private Item findItemByName(String itemName){
-        for(Item item: menu) {
-            if(item.getName().equals(itemName))
+    private Item findItemByName(String itemName) {
+        for (Item item : menu) {
+            if (item.getName().equals(itemName))
                 return item;
         }
         return null;
     }
 
     public void addToMenu(String name, int price) {
-        Item newItem = new Item(name,price);
+        Item newItem = new Item(name, price);
         menu.add(newItem);
     }
 
